@@ -1,0 +1,175 @@
+       @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+       body {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+           background-color: #00AEEF;
+       }
+
+       * {
+           font-family: 'Montserrat', sans-serif;
+           text-decoration: none;
+           list-style: none;
+       }
+
+       nav {
+           width: 100%;
+           background-color: #eee;
+           display: flex;
+           justify-content: center;
+       }
+
+       button {
+           font-size: 16px !important;
+           font-weight: 400 !important;
+           font-family: 'Montserrat', sans-serif;
+           font-style: normal;
+       }
+
+
+       .main-nav {
+           width: 1200px;
+           padding: 0 2rem;
+           display: grid;
+           align-items: center;
+           grid-template-columns: 1fr 4fr;
+           gap: 1rem;
+       }
+
+       .logo img {
+           height: 100px;
+           width: auto;
+       }
+
+       .top {
+           display: flex;
+           flex-wrap: wrap;
+           gap: 1rem;
+           justify-content: end;
+           margin-bottom: 0.5rem;
+       }
+
+       .top a {
+           color: #00AEEF;
+           text-transform: capitalize;
+           font-size: 16px;
+           font-weight: 400;
+       }
+
+       .bottom {
+           margin-top: 0.5rem;
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: end;
+           gap: 1rem;
+           margin: 0;
+       }
+
+       .bottom button {
+           cursor: pointer;
+           background-color: none;
+           border: 2px solid transparent;
+           font-weight: 600;
+           font-size: 1.5rem;
+       }
+
+       .bottom button:focus {
+           border-bottom: 2px solid #00AEEF;
+       }
+
+       .bottom button:hover {
+           border-bottom: 2px solid #00AEEF;
+       }
+
+       .drop-down {
+           position: absolute;
+           right: 0;
+           opacity: 0;
+           display: grid;
+           place-items: center;
+           transition: all 100ms ease-in-out;
+       }
+
+       .toggle {
+           opacity: 1;
+       }
+
+       .nav-list {
+           padding: 0 2rem;
+           background-color: #eee;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           gap: 2rem;
+           list-style: none;
+       }
+
+       .nav-list li {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+       }
+
+       .nav-list li a {
+           font-weight: 400;
+           font-size: 12px;
+           color: black;
+           text-align: center;
+           padding: 10px 20px;
+           line-height: 1.2rem;
+       }
+
+       .nav-list span {
+           height: 3rem;
+           width: 1px;
+           background-color: black;
+       }
+
+
+       .down {
+           position: relative;
+       }
+
+       .drop-down #close {
+           cursor: pointer;
+           margin-top: 5rem;
+           position: absolute;
+           background-color: #eee;
+           border-radius: 100%;
+           border: none;
+           outline: none;
+           font-size: 2rem;
+       }
+
+       @media (max-width: 645px) {
+           .main-nav {
+               grid-template-columns: 1fr;
+               place-items: center;
+           }
+
+           .top {
+               justify-content: center;
+           }
+
+           .bottom {
+               justify-content: center;
+               padding: 0;
+           }
+       }
+
+       @media (max-width: 476px) {
+           .nav-list {
+               flex-direction: column;
+               gap: 0.5rem;
+           }
+
+           .nav-list span {
+               width: 3rem;
+               height: 1px;
+           }
+
+           .drop-down #close {
+               margin-top: 23rem;
+           }
+       }
